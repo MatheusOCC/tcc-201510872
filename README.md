@@ -1,7 +1,6 @@
-# Welcome to streamlit
+# Simulador de Projetos Luminotécnicos
 
-This is the app you get when you run `streamlit hello`, extracted as its own app.
-
-Edit [Hello.py](./Hello.py) to customize this app to your heart's desire. ❤️
-
-Check it out on [Streamlit Community Cloud](https://st-hello-app.streamlit.app/)
+## Resumo:
+- **ENTRADA**: arquivo com parâmetros de entrada (informar modelo no help).
+- **PROCESSAMENTO**: Aplicar o conjunto de entrada em um modelo de redes neurais ELM para gerar os conjuntos de entrada e saída.
+- **SAÍDA**: Planilha para classificação e planilha para regressão (dependendo da escolha no multiselect), concatenando com as entradas.
