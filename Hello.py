@@ -34,7 +34,7 @@ def run():
                     **Trabalho de Conclusão de Curso** para obtenção 
                     do título de **Engenheiro de Computação**
                     durante o semestre de **2023.2**,
-                    na **Univerisdade Federal da Bahia**.''')
+                    na **Universidade Federal da Bahia**.''')
     st.sidebar.info('''**Orientador:**' Antônio Carlos Lopes Fernandes Junior''')
     st.sidebar.info('''**Coorientador:**' Wild Freitas da SIlva Santos''')
 
