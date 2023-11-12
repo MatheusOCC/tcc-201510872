@@ -9,10 +9,11 @@ LOGGER = get_logger(__name__)
 
 
 def seleciona_algoritmo():
-    option = st.selectbox(
+    option = st.multiselect(
     'Selecione o algoritmo a ser utilizado',
     ('Classificação', 'Regressão'))
-    st.write('Algoritmo:', option)
+    return option
+    # st.write('Algoritmo:', option)
 
 def recebe_arquivos():
     uploaded_file = st.file_uploader("Choose a file")
@@ -38,7 +39,7 @@ def run():
     st.sidebar.info('''**Orientador:**' Antônio Carlos Lopes Fernandes Junior''')
     st.sidebar.info('''**Coorientador:**' Wild Freitas da SIlva Santos''')
 
-    seleciona_algoritmo()
+    algoritmo = seleciona_algoritmo()
 
     recebe_arquivos()
 
