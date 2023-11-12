@@ -1,10 +1,24 @@
 
 
+import pandas as pd
 import streamlit as st
 from streamlit.logger import get_logger
 
+
 LOGGER = get_logger(__name__)
 
+
+def seleciona_algoritmo():
+    option = st.selectbox(
+    'Selecione o algoritmo a ser utilizado',
+    ('Classificação', 'Regressão'))
+    st.write('Algoritmo:', option)
+
+def recebe_arquivos():
+    uploaded_file = st.file_uploader("Choose a file")
+    if uploaded_file is not None:
+        dataframe = pd.read_csv(uploaded_file,encoding='latin')
+        st.write(dataframe)
 
 def run():
     st.set_page_config(
@@ -23,6 +37,10 @@ def run():
                     na **Univerisdade Federal da Bahia**.''')
     st.sidebar.info('''**Orientador:**' Antônio Carlos Lopes Fernandes Junior''')
     st.sidebar.info('''**Coorientador:**' Wild Freitas da SIlva Santos''')
+
+    seleciona_algoritmo()
+
+    recebe_arquivos()
 
     # st.markdown(
     #     """
